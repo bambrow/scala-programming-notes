@@ -10,14 +10,13 @@ object ColumnSplit {
       val remainingColNames: Seq[String] = df.columns filter (_ != arrayCol.toString)
       require(colNames.nonEmpty && (remainingColNames.isEmpty || (remainingColNames intersect colNames).isEmpty))
 
-      var df2: Dataset[Row] = df
-      colNames.zipWithIndex foreach {
-        case (colName: String, index: Int) => {
-          df2 = df2 withColumn (colName, arrayCol getItem index)
+      val selectExpr: Seq[Column] = remainingColNames map df.col union {
+        colNames.zipWithIndex map {
+          case (colName: String, index: Int) => arrayCol getItem index as colName
         }
       }
 
-      df2 drop arrayCol
+      df select (selectExpr: _*)
     }
 
     def splitColumn(colName: String, colNames: Seq[String], pattern: String): Dataset[Row] = splitColumn(df col colName, colNames, pattern)
