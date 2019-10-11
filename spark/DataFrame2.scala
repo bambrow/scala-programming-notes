@@ -2,6 +2,16 @@ import org.apache.spark.sql.{Column, Dataset, Row, SparkSession}
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.functions._
 
+/**
+ * This file tests the following Column methods:
+ *   alias, as, name, =!=, ===, <=>, asc, asc_nulls_first, asc_nulls_last,
+ *   desc, desc_nulls_first, desc_nulls_last, cast, contains, startsWith,
+ *   endsWith, unary_!, unary_-, isInCollection, isin, isNaN, isNull, isNotNull,
+ *   substr, length, lit, like, rlike
+ * And the following techniques:
+ *   selectExpr, joinExpr
+ */
+
 object DataFrame2 extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate

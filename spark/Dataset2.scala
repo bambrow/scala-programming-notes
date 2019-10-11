@@ -2,6 +2,13 @@ import org.apache.spark.sql.{Dataset, Row, SparkSession}
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.storage.StorageLevel
 
+/**
+ * This file tests the following methods:
+ *   columns, dtypes, explain, isEmpty, isLocal, persist,
+ *   printSchema, rdd, storageLevel, toDF, unpersist,
+ *   coalesce, union, distinct, except, exceptAll, filter
+ */
+
 object Dataset2 extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate

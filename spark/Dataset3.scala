@@ -1,6 +1,13 @@
 import org.apache.spark.sql.{Dataset, Row, SparkSession}
 import org.apache.log4j.{Level, Logger}
 
+/**
+ * This file tests the following methods:
+ *   groupByKey, mapGroups, flatMap, intersect, intersectAll,
+ *   joinWith, limit, orderBy, randomSplit, sample, select,
+ *   sort, sortWithinPartitions, where
+ */
+
 object Dataset3 extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate

@@ -2,7 +2,7 @@ import org.apache.spark.sql.{Dataset, Row, SparkSession}
 import org.apache.log4j.{Level, Logger}
 import ColumnSplit._
 
-object ColunmSplitTest extends App {
+object ColumnSplitTest extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate
 

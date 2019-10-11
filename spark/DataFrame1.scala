@@ -2,6 +2,15 @@ import org.apache.spark.sql.{Column, Dataset, Row, SparkSession}
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.functions._
 
+/**
+ * This file tests the following methods:
+ *   drop, withColumn, withColumnRenamed, select, join, groupBy,
+ *   sort, union, rollup, filter, createOrReplaceTempView,
+ *   sql, cube, agg
+ * And the following sql.functions:
+ *   col, lit, grouping_id
+ */
+
 object DataFrame1 extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate

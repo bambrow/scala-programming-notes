@@ -3,6 +3,17 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 
+/**
+ * This file tests the following method:
+ *   parallelize
+ * And the following Column methods:
+ *   getItem, getField
+ * And the following sql.functions:
+ *   collect_list, collect_set
+ * And the following data structures:
+ *   StructType, StructField
+ */
+
 object DataFrame3 extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate

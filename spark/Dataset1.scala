@@ -1,6 +1,12 @@
 import org.apache.spark.sql.{Dataset, Row, SparkSession}
 import org.apache.log4j.{Level, Logger}
 
+/**
+ * This file tests the following methods:
+ *   as, collect, count, describe, foreach, foreachPartition,
+ *   repartition, head, map, reduce, take
+ */
+
 object Dataset1 extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate

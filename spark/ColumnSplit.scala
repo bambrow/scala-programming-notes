@@ -1,6 +1,10 @@
 import org.apache.spark.sql.{Column, Dataset, Row}
 import org.apache.spark.sql.functions._
 
+/**
+ * This file uses an implicit class to extend the functionality of DataFrame.
+ */
+
 object ColumnSplit {
 
   implicit class ColumnSplitHandler(df: Dataset[Row]) extends Serializable {
