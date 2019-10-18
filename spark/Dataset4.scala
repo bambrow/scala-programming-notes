@@ -1,6 +1,12 @@
 import org.apache.spark.sql.{Dataset, Row, SparkSession}
 import org.apache.log4j.{Level, Logger}
 
+/**
+ * This file shows how to handle null values in
+ *   DataFrame when converting them to case class
+ *   in Dataset using Option.
+ */
+
 object Dataset4 extends App {
 
   implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate
