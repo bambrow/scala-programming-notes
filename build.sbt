@@ -9,6 +9,7 @@ lazy val supportedScalaVersions = List(scala213, scala212)
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % "2.4.4",
   "org.apache.spark" %% "spark-sql" % "2.4.4",
+  "org.apache.spark" %% "spark-streaming" % "2.4.4",
   "org.json4s" %% "json4s-native" % "3.6.7",
   "org.json4s" %% "json4s-jackson" % "3.6.7",
   "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
