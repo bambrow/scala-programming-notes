@@ -12,7 +12,7 @@ import scala.concurrent.duration.Duration
 object SparkFutureTest {
 
   def main(args: Array[String]): Unit = {
-    implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate
+    implicit val ss: SparkSession = SparkSession.builder.master("local[5]").getOrCreate
     lazy val threadPool: ExecutorService = Executors.newFixedThreadPool(5)
     implicit val xc: ExecutionContext = new ExecutionContext {
       override def execute(runnable: Runnable): Unit = threadPool.submit(runnable)
