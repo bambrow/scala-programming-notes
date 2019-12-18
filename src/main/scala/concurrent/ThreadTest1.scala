@@ -1,5 +1,9 @@
 package concurrent
 
+/**
+ * Basic thread test: extends Thread.
+ */
+
 class MyThread1 extends Thread {
   override def run(): Unit = {
     println("Thread " + Thread.currentThread.getName + " is running.")

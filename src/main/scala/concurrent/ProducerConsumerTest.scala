@@ -6,6 +6,10 @@ import scala.concurrent.{ExecutionContext, Future}
 import scala.io.{BufferedSource, Source}
 import scala.util.{Failure, Success}
 
+/**
+ * Producer-consumer model, using numThread to control termination.
+ */
+
 object ProducerConsumerTest {
 
   lazy val threadPool: ExecutorService = Executors.newFixedThreadPool(10)

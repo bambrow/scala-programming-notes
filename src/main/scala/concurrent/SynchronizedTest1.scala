@@ -4,6 +4,10 @@ import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.util.Success
 
+/**
+ * Test variable read/write without synchronized.
+ */
+
 object SynchronizedTest1 {
 
   def main(args: Array[String]): Unit = {

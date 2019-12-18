@@ -9,6 +9,10 @@ import scala.concurrent.{Await, ExecutionContext, Future}
 // import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 
+/**
+ * Test Future with SparkSession.
+ */
+
 object SparkFutureTest {
 
   def main(args: Array[String]): Unit = {

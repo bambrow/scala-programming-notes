@@ -4,6 +4,10 @@ import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Random, Success}
 
+/**
+ * Test for-comprehension.
+ */
+
 object FutureLoopTest {
 
   def main(args: Array[String]): Unit = {

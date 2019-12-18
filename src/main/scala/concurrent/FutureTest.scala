@@ -5,6 +5,10 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 import scala.util.{Failure, Success}
 
+/**
+ * Basic Future test.
+ */
+
 object FutureTest {
 
   def sampleFunc(x: Int, time: Long): Unit = {

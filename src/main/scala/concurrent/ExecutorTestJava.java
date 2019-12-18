@@ -4,6 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.concurrent.Executor;
 
+/**
+ * Java Executor test.
+ */
+
 class SerialSampleExecutor implements Executor {
     final Queue<Runnable> tasks = new ArrayDeque<>();
     final Executor executor;

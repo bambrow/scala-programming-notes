@@ -2,6 +2,10 @@ package concurrent
 
 import java.util.concurrent.Executor
 
+/**
+ * Basic thread test: extends (implements) Runnable.
+ */
+
 class MyThread2 extends Runnable {
   override def run(): Unit = {
     println("Thread " + Thread.currentThread.getName + " is running.")
