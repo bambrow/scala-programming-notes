@@ -11,7 +11,7 @@ import scala.util.Random
 
 object SparkForeachTest extends App {
 
-  implicit val ss: SparkSession = SparkSession.builder.master("local").getOrCreate
+  implicit val ss: SparkSession = SparkSession.builder.master("local[5]").getOrCreate
 
   Logger.getLogger("org").setLevel(Level.OFF)
   Logger.getLogger("akka").setLevel(Level.OFF)
@@ -50,25 +50,29 @@ object SparkForeachTest extends App {
   }
    */
 
-  val strDS: Dataset[String] = generator.getStringDS(n = 5, k = 20)
+  val strDS: Dataset[String] = generator.getStringDS(n = 5, k = 10)
 
   // strDS foreach will give java.lang.NullPointerException
   strDS.collect foreach {
     s => {
+      val startTime: Long = System.currentTimeMillis()
       var foundMatch: Boolean = false
       var cnt: Int = 0
       val cArr: Array[Char] = s.toCharArray
       while (!foundMatch) {
         cnt = cnt + 1
-        val ds: Dataset[String] = generator.getStringDS(n = 5, k = 20)
+        val ds: Dataset[String] = generator.getStringDS(n = 5, k = 10)
         val filtered: Dataset[String] = ds.filter(_.toCharArray.intersect(cArr).length > 0)
         if (filtered.count > 0) {
           filtered.collect foreach println
           foundMatch = true
           println(s"count = $cnt")
-          println
         }
       }
+      val endTime: Long = System.currentTimeMillis()
+      println(s"time = ${endTime - startTime}")
+      println(s"thread = ${Thread.currentThread.getName}")
+      println
     }
   }
 
