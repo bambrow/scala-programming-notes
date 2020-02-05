@@ -1,7 +1,7 @@
-package scalatest
+package scalatest.basics
 
-import org.scalatest.{FlatSpec, Tag}
 import org.scalatest.tagobjects.Slow
+import org.scalatest.{FlatSpec, Tag}
 
 object MyTag extends Tag("bambrow.MyTag")
 

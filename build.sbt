@@ -12,6 +12,8 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-streaming" % "2.4.4",
   "org.json4s" %% "json4s-native" % "3.6.7",
   "org.json4s" %% "json4s-jackson" % "3.6.7",
-  "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
+  "org.scala-lang.modules" %% "scala-xml" % "1.2.0",
+  "org.scalactic" %% "scalactic" % "3.1.0",
+  "org.scalatest" %% "scalatest" % "3.1.0" % "test"
 )
 

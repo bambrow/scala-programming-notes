@@ -1,4 +1,4 @@
-package scalatest
+package scalatest.fixture
 
 import org.scalatest.FlatSpec
 
@@ -36,16 +36,19 @@ class ExampleFixture extends FlatSpec {
     assert(f.buffer.isEmpty)
   }
 
+  // this test uses trait Builder
   it should "test builder only" in new Builder {
     builder.append("builder!")
     assert(builder.toString === "hello builder!")
   }
 
+  // this test uses trait Buffer
   it should "test buffer only" in new Buffer {
     buffer += "abc"
     assert(buffer.head === "abc")
   }
 
+  // this test uses both trait Builder and trait Buffer
   it should "test both builder and buffer using traits" in new Builder with Buffer {
     builder.append("everyone!")
     buffer += "nice"
