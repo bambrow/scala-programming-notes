@@ -14,6 +14,8 @@ libraryDependencies ++= Seq(
   "org.json4s" %% "json4s-jackson" % "3.6.7",
   "org.scala-lang.modules" %% "scala-xml" % "1.2.0",
   "org.scalactic" %% "scalactic" % "3.1.0",
-  "org.scalatest" %% "scalatest" % "3.1.0" % "test"
+  "org.scalatest" %% "scalatest" % "3.1.0" % "test",
+  "com.google.code.gson" % "gson" % "2.8.6",
+  "org.projectlombok" % "lombok" % "1.18.12" % "compile"
 )
 
