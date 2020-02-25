@@ -1,0 +1,12 @@
+{"key":"content"}
+"{\"key\":\"content\"}"
+{"key1":"content1","key2":"content2"}
+"{\"key1\":\"content1\",\"key2\":\"content2\"}"
+{"key":"content"}|something
+"{\"key\":\"content\"}"|something
+{"key1":"content1","key2":"content2"}|something
+"{\"key1\":\"content1\",\"key2\":\"content2\"}"|something
+{"key1":"content1"}|{"key2":"content2"}
+"{\"key1\":\"content1\"}"|{"key2":"content2"}
+{"key1":"content1"}|"{\"key2\":\"content2\"}"
+"{\"key1\":\"content1\"}"|"{\"key2\":\"content2\"}"

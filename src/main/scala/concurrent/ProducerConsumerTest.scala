@@ -1,5 +1,6 @@
 package concurrent
 
+import java.io.File
 import java.util.concurrent.{BlockingQueue, ExecutorService, Executors, LinkedBlockingQueue}
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -25,7 +26,8 @@ object ProducerConsumerTest {
   }
 
   def main(args: Array[String]): Unit = {
-    val path: String = "src/main/resources/producer_consumer.txt"
+    val projectDir: String = new File(".").getCanonicalPath
+    val path: String = projectDir + "/src/main/resources/producer_consumer.txt"
     val source: BufferedSource = Source.fromFile(path)
     var numThreads: Int = 0
 
