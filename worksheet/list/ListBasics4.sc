@@ -8,8 +8,8 @@ l1 dropWhile (_ < 3)
 // res1: List[Int] = List(1, 2)
 // res2: List[Int] = List(3)
 
-l1.empty == List[Int]()
-// res3: Boolean = true
+// l1.empty == List[Int]()
+// res3: Boolean = true -- 2.13
 
 l1 endsWith List(2,3)
 l1 equals List(1,2,3)
@@ -26,9 +26,9 @@ l1 filterNot (_ > 2)
 // res9: List[Int] = List(1, 2)
 
 l1 find (_ > 1)
-l1 findLast (_ > 1)
+// l1 findLast (_ > 1)
 // res10: Option[Int] = Some(2)
-// res11: Option[Int] = Some(3)
+// res11: Option[Int] = Some(3) -- 2.13
 
 List(l1, l2) flatMap {
 _ map (_.toString)

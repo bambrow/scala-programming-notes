@@ -8,18 +8,18 @@ l1 maxBy (_ % 2)
 // res1: Int = 3
 // res2: Int = 1
 
-l1 maxByOption (_ % 2)
-l1.maxOption
+// l1 maxByOption (_ % 2)
+// l1.maxOption
 l1.min
 l1 minBy (_ % 2)
-l1 minByOption (_ % 2)
-l1.minOption
-// res3: Option[Int] = Some(1)
-// res4: Option[Int] = Some(3)
+// l1 minByOption (_ % 2)
+// l1.minOption
+// res3: Option[Int] = Some(1) -- 2.13
+// res4: Option[Int] = Some(3) -- 2.13
 // res5: Int = 1
 // res6: Int = 2
-// res7: Option[Int] = Some(2)
-// res8: Option[Int] = Some(1)
+// res7: Option[Int] = Some(2) -- 2.13
+// res8: Option[Int] = Some(1) -- 2.13
 
 l1.mkString
 l1 mkString "--"

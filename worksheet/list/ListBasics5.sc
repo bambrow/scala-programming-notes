@@ -15,6 +15,7 @@ l1 groupBy {
 }
 // res4: scala.collection.immutable.Map[Int,List[Int]] = HashMap(5 -> List(2), 6 -> List(3), 4 -> List(1))
 
+/*
 l1.groupMap(_ > 1)(_.toString)
 // res5: scala.collection.immutable.Map[Boolean,List[String]] = Map(false -> List(1), true -> List(2, 3))
 l1.groupMap({
@@ -35,6 +36,8 @@ l1.groupMap({
   (x: String, y: String) => y + x
 })
 // res8: scala.collection.immutable.Map[Int,String] = Map(0 -> 666333, 1 -> 444111, 2 -> 555222)
+*/
+// -- 2.13
 
 ((l1 ++ l2) grouped 2).toSeq
 ((l1 ++ l2) grouped 4).toSeq

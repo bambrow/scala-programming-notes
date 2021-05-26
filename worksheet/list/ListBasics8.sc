@@ -15,16 +15,17 @@ l1.scanRight(0)(_ + _)
 // res4: List[Int] = List(0, 1, 3, 6)
 // res5: List[Int] = List(6, 5, 3, 0)
 
-(l1 ++ l2) search 4
-(l1 ++ l2) search (4, 0, 2)
-// res6: scala.collection.Searching.SearchResult = Found(3)
-// res7: scala.collection.Searching.SearchResult = InsertionPoint(2)
+// (l1 ++ l2) search 4
+// (l1 ++ l2) search (4, 0, 2)
+// res6: scala.collection.Searching.SearchResult = Found(3) -- 2.13
+// res7: scala.collection.Searching.SearchResult = InsertionPoint(2) -- 2.13
 
-List(0,1,3,5,7,8,9) segmentLength (_ % 2 == 1)
+// List(0,1,3,5,7,8,9) segmentLength (_ % 2 == 1)
 List(0,1,3,5,7,8,9) segmentLength (_ % 2 == 1, 2)
-// res8: Int = 0
+// res8: Int = 0 -- 2.13
 // res9: Int = 3
 
+/*
 l1 sizeCompare 5
 l1 sizeCompare 3
 l1 sizeCompare 1
@@ -33,6 +34,8 @@ l1 sizeCompare l2
 // res11: Int = 0
 // res12: Int = 1
 // res13: Int = 0
+*/
+// -- 2.13
 
 (l1 ++ l2) slice (2, 5)
 ((l1 ++ l2) sliding 3).toSeq
@@ -78,7 +81,7 @@ l1 takeRight 2
 // res31: List[Int] = List(2, 3)
 
 (l1 ++ l2) takeWhile (_ < 3)
-(l1 ++ l2) tapEach println
+// (l1 ++ l2) tapEach println
 // res32: List[Int] = List(1, 2)
 // 1
 // 2
@@ -86,4 +89,4 @@ l1 takeRight 2
 // 4
 // 5
 // 6
-// res33: List[Int] = List(1, 2, 3, 4, 5, 6)
+// res33: List[Int] = List(1, 2, 3, 4, 5, 6) -- 2.13

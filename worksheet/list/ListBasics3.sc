@@ -48,5 +48,5 @@ l1 diff List(2,3,4)
 (l1 ++ List(2,3,4)).distinct
 // res15: List[Int] = List(1, 2, 3, 4)
 
-(l1 ++ l2) distinctBy (_ / 2)
-// res16: List[Int] = List(1, 2, 4, 6)
+// (l1 ++ l2) distinctBy (_ / 2)
+// res16: List[Int] = List(1, 2, 4, 6) -- 2.13

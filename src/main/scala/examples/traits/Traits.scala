@@ -1,5 +1,7 @@
 package examples.traits
 
+import scala.language.postfixOps
+
 object Traits {
 
   trait A {

@@ -118,7 +118,7 @@ object DataFrame3 extends App {
   +----+--------------------+--------------------+---+
    */
 
-  val selectExpr1: Seq[Column] = df5.columns map df5.col union {
+  val selectExpr1: Seq[Column] = df5.columns.toSeq map df5.col union {
     Seq("c1", "c2", "c3").zipWithIndex map {
       case (col: String, index: Int) => $"courses" getItem index as col
     }

@@ -40,19 +40,19 @@ l1.last
 // res16: Int = 0
 
 l1.lastOption
-(l1 lazyZip l1.indices).toSeq
+// (l1 lazyZip l1.indices).toSeq
 // res17: Option[Int] = Some(3)
-// res18: Seq[(Int, Int)] = List((1,0), (2,1), (3,2))
+// res18: Seq[(Int, Int)] = List((1,0), (2,1), (3,2)) -- 2.13
 
 l1.length
 l1.size
 l1 lengthCompare 1
 l1 lengthCompare 3
 l1 lengthCompare 5
-l1 lengthCompare l2
+// l1 lengthCompare l2
 // res19: Int = 3
 // res20: Int = 3
 // res21: Int = 1
 // res22: Int = 0
 // res23: Int = -1
-// res24: Int = 0
+// res24: Int = 0 -- 2.13

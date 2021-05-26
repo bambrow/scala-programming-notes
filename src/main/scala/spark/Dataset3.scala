@@ -55,7 +55,7 @@ object Dataset3 extends App {
   ) toDF ("name", "grade")
 
   val ds3 = df3.as[Grade] groupByKey (_.name) mapGroups {
-    case (k, vs) => Student(k, (vs map (_.grade)).toSeq)
+    (k: String, vs: Iterator[Grade]) => Student(k, (vs map (_.grade)).toSeq)
   }
 
   ds3.show
